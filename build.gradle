@@ -4,7 +4,7 @@ plugins {
 }
 
 version "0.1"
-group "example.micronaut"
+group "micronaut.example"
 
 repositories {
     mavenCentral()
@@ -16,7 +16,7 @@ micronaut {
     testRuntime "junit5"
     processing {
         incremental true
-        annotations "example.micronaut.*"
+        annotations "micronaut.example.*"
     }
 }
 
@@ -28,11 +28,12 @@ dependencies {
     implementation("io.micronaut.liquibase:micronaut-liquibase")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
     implementation("io.micronaut.data:micronaut-data-jdbc")
+    implementation("jakarta.persistence:jakarta.persistence-api:2.2.3")
     runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.h2database:h2")
 }
 
-mainClassName = "example.micronaut.Application"
+mainClassName = "micronaut.example.Application"
 java {
     sourceCompatibility = JavaVersion.toVersion('1.8')
     targetCompatibility = JavaVersion.toVersion('1.8')
