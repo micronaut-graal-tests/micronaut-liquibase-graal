@@ -1,2 +1,2 @@
 ./gradlew nativeImage
-cp build/native-image/liquibase-h2 .
+cp build/native-image/liquibase-postgres .
