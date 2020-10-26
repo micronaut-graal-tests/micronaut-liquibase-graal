@@ -12,3 +12,6 @@ out/
 .settings
 .classpath
 .factorypath
+liquibase-h2*
+liquibase-postgres*
+liquibase-mariadb*
