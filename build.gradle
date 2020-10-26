@@ -34,11 +34,13 @@ dependencies {
 }
 
 mainClassName = "micronaut.example.Application"
+
 java {
     sourceCompatibility = JavaVersion.toVersion('1.8')
     targetCompatibility = JavaVersion.toVersion('1.8')
 }
 
-
-
+nativeImage {
+    imageName = 'liquibase-h2'
+}
 
