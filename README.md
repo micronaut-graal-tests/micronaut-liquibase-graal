@@ -1,5 +1,9 @@
-# Micronaut Liquibase Graal
+# Micronaut Liquibase
 
-:warning: **The master branch is not used.**
+Test application for Micronaut Liquibase and GraalVM that uses H2.
 
-Checkout branches for each specific databases: `h2`, `postgres` and `mariadb`.
+To test the application:
+
+```
+curl localhost:8080/users
+```
