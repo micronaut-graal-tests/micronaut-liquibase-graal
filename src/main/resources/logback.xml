@@ -1,5 +1,9 @@
 <configuration>
 
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <withJansi>true</withJansi>
         <!-- encoders are assigned the type
@@ -14,6 +18,7 @@
     </root>
 
     <logger name="io.micronaut.liquibase" level="TRACE" />
-    <logger name="org.liquibase" level="TRACE" />
+    <logger name="liquibase" level="DEBUG" />
+    <logger name="liquibase.servicelocator" level="INFO" />
     <logger name="io.micronaut.data.query" level="DEBUG" />
 </configuration>
