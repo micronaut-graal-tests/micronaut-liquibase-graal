@@ -9,6 +9,20 @@ group "micronaut.example"
 repositories {
     mavenCentral()
     jcenter()
+    maven { url "https://oss.jfrog.org/oss-snapshot-local" }
+}
+
+configurations {
+    all {
+        resolutionStrategy {
+            eachDependency { DependencyResolveDetails details ->
+                // specifying a fixed version for all libraries with 'io.micronaut.data' group
+                if (details.requested.group == 'io.micronaut.data') {
+                    details.useVersion micronautDataVersion
+                }
+            }
+        }
+    }
 }
 
 micronaut {
