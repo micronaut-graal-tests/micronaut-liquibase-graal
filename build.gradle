@@ -20,6 +20,9 @@ configurations {
                 if (details.requested.group == 'io.micronaut.data') {
                     details.useVersion micronautDataVersion
                 }
+                if (details.requested.group == 'org.liquibase') {
+                    details.useVersion '4.3.1'
+                }
             }
         }
     }
