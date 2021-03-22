@@ -60,5 +60,4 @@ java {
 
 nativeImage {
     imageName('liquibase-postgres')
-    args = ["-H:+StaticExecutableWithDynamicLibC"]
 }
