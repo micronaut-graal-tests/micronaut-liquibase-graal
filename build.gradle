@@ -60,5 +60,4 @@ java {
 
 nativeImage {
     imageName('liquibase-h2')
-    args = ["-H:+StaticExecutableWithDynamicLibC"]
 }
