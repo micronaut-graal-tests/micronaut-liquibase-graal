@@ -60,5 +60,4 @@ java {
 
 nativeImage {
     imageName('liquibase-mariadb')
-    args = ["-H:+StaticExecutableWithDynamicLibC"]
 }
