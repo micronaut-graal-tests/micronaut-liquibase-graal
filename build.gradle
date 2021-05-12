@@ -60,4 +60,11 @@ java {
 
 nativeImage {
     imageName('liquibase-postgres')
+    if (JavaVersion.current() != JavaVersion.VERSION_1_8) {
+        // This is only needed for JDK16+. See https://github.com/oracle/graal/issues/3404
+        args = [
+            '-J--add-opens=java.xml/com.sun.org.apache.xerces.internal.impl.msg=ALL-UNNAMED',
+            '-J--add-opens=java.xml/com.sun.org.apache.xerces.internal.impl.xpath.regex=ALL-UNNAMED'
+        ]
+    }
 }
