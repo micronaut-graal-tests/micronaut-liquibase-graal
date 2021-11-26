@@ -1,2 +1,4 @@
-./gradlew nativeImage
-cp build/native-image/liquibase-postgres .
+#!/bin/bash
+
+./gradlew nativeCompile
+cp build/native/nativeCompile/liquibase-postgres .
